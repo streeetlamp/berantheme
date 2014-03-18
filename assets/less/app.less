@@ -1,0 +1,223 @@
+// Core variables and mixins
+@import "variables.less";
+@import "bootstrap/mixins.less";
+@import "slider.less";
+
+// Reset
+@import "bootstrap/normalize.less";
+@import "bootstrap/print.less";
+
+// Core CSS
+@import "bootstrap/scaffolding.less";
+@import "bootstrap/type.less";
+@import "bootstrap/code.less";
+@import "bootstrap/grid.less";
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/buttons.less";
+
+// Components
+@import "bootstrap/component-animations.less";
+@import "bootstrap/glyphicons.less";
+@import "bootstrap/dropdowns.less";
+@import "bootstrap/button-groups.less";
+@import "bootstrap/input-groups.less";
+@import "bootstrap/navs.less";
+@import "bootstrap/navbar.less";
+@import "bootstrap/breadcrumbs.less";
+@import "bootstrap/pagination.less";
+@import "bootstrap/pager.less";
+@import "bootstrap/labels.less";
+@import "bootstrap/badges.less";
+@import "bootstrap/jumbotron.less";
+@import "bootstrap/thumbnails.less";
+@import "bootstrap/alerts.less";
+@import "bootstrap/progress-bars.less";
+@import "bootstrap/media.less";
+@import "bootstrap/list-group.less";
+@import "bootstrap/panels.less";
+@import "bootstrap/wells.less";
+@import "bootstrap/close.less";
+
+// Components w/ JavaScript
+@import "bootstrap/modals.less";
+@import "bootstrap/tooltip.less";
+@import "bootstrap/popovers.less";
+@import "bootstrap/carousel.less";
+
+// Utility classes
+@import "bootstrap/utilities.less";
+@import "bootstrap/responsive-utilities.less";
+
+/*!
+ * Roots 6.5.2
+ */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+   font-family: "Avenir", @font-family-sans-serif;
+   font-weight: 400;
+   font-variant: normal;
+}
+
+strong, .strong {
+   font-family: "AvenirBold", @font-family-sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+em {
+   font-family: "AvenirItalic", @font-family-sans-serif;
+   font-weight: 400;
+   font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "AvenirBold", @font-family-sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+a {
+   font-family: "AvenirBold", @font-family-sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner {
+   padding-top: 25px;
+   padding-bottom: 20px;
+   box-shadow: 0 10px 10px -10px #555;
+}
+.navbar-branding {
+   margin-bottom: 20px;
+   padding: 0 40px;
+}
+.beran-tagline {
+   margin-top: 20px;
+   text-align: right;
+}
+.navbar-default .navbar-nav > li > a {
+   .strong;
+   text-transform: uppercase;
+   font-size: 16px;
+   letter-spacing: 1px;
+   border-right: solid 2px @brand-second;
+}
+.navbar-default .navbar-nav > li.phone-num > a {
+   color: @brand-success;
+}
+body.home .navbar {
+   margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Homepage Content
+   ========================================================================== */
+.slider-wrapper {
+   #gradient.vertical(#FEFFFE; #D3EDE7; 0%; 75%);
+   width: 100%;
+   box-shadow: inset 0 -10px 10px -10px #555;
+}
+.royalSlider {
+  width: 100%;
+  height: 555px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+#pathways {
+   box-shadow: 0 10px 10px -10px #555;
+   padding: 40px 0;
+   margin-bottom: 65px;
+   .container {
+      margin: 0 auto;
+   }
+}
+.pathways-item {
+   h4 {
+      color: @beran-brown;
+      margin-top: 20px;
+   }
+}
+#home-content {
+   border-bottom: solid 1px @gray-light;
+   padding-bottom: 40px;
+}
+.home-copy {
+   font-size: 20px;
+   line-height: 1.75;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) { }
+
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }
+
