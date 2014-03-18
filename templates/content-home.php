@@ -6,8 +6,8 @@
             <div class="col-md-8 home-copy">
               <?php the_content(); ?>
             </div>
-            <div class="col-md-4">
-
+            <div class="col-md-4 track-record">
+              <?php the_field('track_record'); ?>
             </div>
           </div>
         <?php endwhile; ?>

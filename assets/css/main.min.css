@@ -6079,7 +6079,6 @@ a {
 }
 .navbar-branding {
   margin-bottom: 20px;
-  padding: 0 40px;
 }
 .beran-tagline {
   margin-top: 20px;
@@ -6090,7 +6089,7 @@ a {
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 1px;
   border-right: solid 2px #c8bab2;
 }
@@ -6136,6 +6135,25 @@ body.home .navbar {
 .home-copy {
   font-size: 20px;
   line-height: 1.75;
+}
+.track-record {
+  color: #77787b;
+}
+.track-record h3 {
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: #599495;
+}
+.track-record ul {
+  padding-left: 1.25em;
+}
+.track-record ul li {
+  text-transform: uppercase;
+  font-family: "AvenirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 /* ==========================================================================
    Content
