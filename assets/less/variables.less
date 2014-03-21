@@ -23,6 +23,8 @@
 @beran-brown:           #874a2b;
 @title-gray:            #599495;
 @list-gray:             #77787b;
+@footer-bg:             #42555D;
+@beran-tan:             #BBABA2;
 
 
 //== Scaffolding
@@ -87,6 +89,16 @@
    font-weight: 700;
    font-style: italic;
 }
+@font-face {
+   font-family: 'Bickham';
+      src: url('../fonts/BickhamScriptProRegular.eot');
+      src: url('../fonts/BickhamScriptProRegular.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/BickhamScriptProRegular.woff') format('woff'),
+           url('../fonts/BickhamScriptProRegular.ttf') format('truetype'),
+           url('../fonts/BickhamScriptProRegular.svg#Bickham') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
 
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
@@ -113,7 +125,7 @@
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
 @headings-font-weight:    700;
-@headings-line-height:    1.1;
+@headings-line-height:    1.35;
 @headings-color:          inherit;
 
 
@@ -225,17 +237,17 @@
 //** Text color for `<input>`s
 @input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   #BBABA2;
 //** `<input>` border radius
-@input-border-radius:            @border-radius-base;
+@input-border-radius:            0;
 //** Border color for inputs on focus
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        @gray-light;
+@input-color-placeholder:        @title-gray;
 
 //** Default `.form-control` height
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 4) + 4);
 //** Large `.form-control` height
 @input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 //** Small `.form-control` height
@@ -375,7 +387,7 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    20px;
+@navbar-height:                    50px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
@@ -437,7 +449,7 @@
 //##
 
 //=== Shared nav styles
-@nav-link-padding:                          10px 15px;
+@nav-link-padding:                          5px 10px;
 @nav-link-hover-bg:                         @gray-lighter;
 
 @nav-disabled-link-color:                   @gray-light;

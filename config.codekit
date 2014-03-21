@@ -36,6 +36,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/birdnest.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 38355,
+		"inputAbbreviatedPath": "\/assets\/img\/birdnest.png",
+		"outputAbbreviatedPath": "\/assets\/img\/birdnest.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/js\/_main.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -162,6 +172,16 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/transition.js",
 		"outputAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/min\/transition-ck.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/plugins\/hover-dropdown.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/plugins\/hover-dropdown.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/plugins\/min\/hover-dropdown.min-ck.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1119,6 +1139,22 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/lib\/fb-sdk\/base_facebook.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/fb-sdk\/base_facebook.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/lib\/fb-sdk\/facebook.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/fb-sdk\/facebook.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
 	"\/lib\/gallery.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1255,16 +1291,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
-	"\/templates\/BeranHomePage.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.03418e+06,
-		"inputAbbreviatedPath": "\/templates\/BeranHomePage.jpg",
-		"outputAbbreviatedPath": "\/templates\/BeranHomePage.jpg",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/templates\/comment.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1318,6 +1344,14 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/templates\/entry-meta.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/fb-feed.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/fb-feed.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
@@ -1437,44 +1471,50 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/modal.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/hover-dropdown.min.js",
 			"position": 6,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/royalslider.min.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/modal.js",
 			"position": 7,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/scrollspy.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/royalslider.min.js",
 			"position": 8,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/tab.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/scrollspy.js",
 			"position": 9,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/tooltip.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/tab.js",
 			"position": 10,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/transition.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/tooltip.js",
 			"position": 11,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/popover.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/transition.js",
 			"position": 12,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/assets\/js\/plugins\/bootstrap\/popover.js",
+			"position": 13,
 			"type": 0
 			}
 		]

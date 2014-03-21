@@ -1,16 +1,20 @@
 <div class="slider-wrapper">
   <div id="beranSlider" class="royalSlider rsDefault">
-  <?php
-    $temp = $wp_query;
-    $wp_query = null;
-    $wp_query = new WP_Query();
-    $wp_query->query('post_type=slide'); ?>
-  <?php while ($wp_query->have_posts()) : $wp_query->the_post();?>
-    <div>
-      <?php the_post_thumbnail('full', array('class' => 'rsImg')); ?>
-    </div>
-  <?php endwhile;?>
-  <?php $wp_query = null; $wp_query = $temp;?>
-  <?php wp_reset_query(); ?>
+    <?php
+    $args = array (
+      'post_type'              => 'slide',
+    );
+
+    $query = new WP_Query( $args );
+
+    if ( $query->have_posts() ) {
+      while ( $query->have_posts() ) {
+        $query->the_post(); ?>
+        <div>
+          <?php the_post_thumbnail('full', array('class' => 'rsImg')); ?>
+        </div>
+      <?php }
+      // no posts found
+    } wp_reset_postdata(); ?>
   </div>
 </div>

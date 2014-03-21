@@ -22,7 +22,7 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-      // JavaScript to be fired on all pages
+      $('.dropdown-toggle').dropdownHover();
     }
   },
   // Home page
@@ -39,7 +39,8 @@ var Roots = {
             imageScalePadding: 0,
             autoPlay: {
               enabled: true,
-              pauseOnHover: true
+              pauseOnHover: true,
+              delay: 3000
             }
         });
     }
