@@ -23,6 +23,29 @@ var Roots = {
   common: {
     init: function() {
       $('.dropdown-toggle').dropdownHover();
+
+      $( ".highlight-click" ).click(function() {
+        event.preventDefault();
+        $( "#sl-map" ).toggleClass( "highlighted" );
+      });
+
+      $( ".residents-click" ).click(function() {
+        $( "#residents-club" ).slideDown( 1500 );
+      });
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
     }
   },
   // Home page
@@ -40,7 +63,7 @@ var Roots = {
             autoPlay: {
               enabled: true,
               pauseOnHover: true,
-              delay: 3000
+              delay: 4000
             }
         });
     }

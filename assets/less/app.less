@@ -93,7 +93,40 @@ a {
    font-style: normal;
    font-size: ceil((@font-size-base * 3.0));
 }
-
+.navy-text {
+   color: @beran-navy;
+   .strong;
+   text-transform: uppercase;
+   font-size: @font-size-h4;
+   em {
+      font-family: 'AvenirBoldItalic';
+   }
+}
+.gray-em {
+   color: @title-gray;
+   font-family: 'AvenirItalic', @font-family-sans-serif;
+   font-style: italic;
+   font-weight: 400;
+   font-size: @font-size-h4;
+   display: block;
+   clear: both;
+}
+a.red-button {
+   width: 100%;
+   background: @brand-success;
+   display: block;
+   color: white;
+   padding: 10px 20px;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 20px 0;
+   font-size: @font-size-h4;
+   letter-spacing: .075em;
+   &:hover {
+      text-decoration: none;
+      background: darken(@brand-success, 10%)
+   }
+}
 
 /* ==========================================================================
    Header
@@ -117,6 +150,8 @@ a {
    letter-spacing: .05em;
    &:hover {
       z-index: 999;
+      background: @brand-success;
+      color: white;
       &:after {
          .hidden;
       }
@@ -130,6 +165,12 @@ a {
    height  : 12px;
    width   : 2px;
    background: @brand-second;
+}
+.navbar-default .navbar-nav > li.active {
+   z-index: 99;
+}
+.navbar-default .navbar-nav > li.active > a:after {
+   background: transparent;
 }
 .navbar-default .navbar-nav > li.social-menu > a {
    border-right: none;
@@ -151,9 +192,17 @@ a {
 }
 .navbar-default .navbar-nav > li.phone-num > a {
    color: @brand-success;
+   font-size: 16px;
+   &:hover {
+      background: transparent;
+   }
 }
 body.home .navbar {
    margin-bottom: 0;
+}
+
+.navbar-static-top {
+   border: none;
 }
 
 /* ==========================================================================
@@ -238,10 +287,66 @@ body.home .navbar {
    float: right;
 }
 /* ==========================================================================
-   Content
+   Page Content
    ========================================================================== */
-
+.page-header {
+   color: @title-gray;
+   text-transform: uppercase;
+}
+body.page .content {
+   font-size: 16px;
+   line-height: 1.65;
+   img {
+      max-width: 100%;
+      height: auto;
+   }
+}
+body.page .content img.alignleft {
+   margin: 0 20px 20px 0;
+}
 .content { }
+
+.page-gallery-item {
+   border-top: solid 1px @beran-tan;
+   padding: 20px 0;
+   border-bottom: solid 1px @beran-tan;
+   margin-top: 20px;
+   img {
+      width: 100%;
+      height: auto;
+   }
+}
+
+ul.sl-map-list {
+   margin: 40px 0 -200px 0;
+   .strong;
+   text-transform: uppercase;
+   color: @title-gray;
+   a {
+      text-transform: lowercase;
+   }
+   li {
+      margin-bottom: 15px;
+   }
+}
+
+#sl-map {
+   background-size: cover !important;
+   position: relative;
+   z-index: -1;
+   &.highlighted {
+      img {
+      opacity: 0;
+      }
+   }
+}
+#residents-club {
+   margin: 20px 0 40px 0;
+   display: none;
+}
+.sponsor-logos {
+   margin-top: 2em;
+}
 
 /* ==========================================================================
    Primary Content

@@ -19,6 +19,43 @@ function roots_setup() {
   // Add post formats (http://codex.wordpress.org/Post_Formats)
   // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
+  /* TinyMCE additional buttons -source: http://alisothegeek.com/2011/05/tinymce-styles-dropdown-wordpress-visual-editor/ */
+  add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+
+  function my_mce_buttons_2( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+  }
+
+  add_filter( 'tiny_mce_before_init', 'my_mce_before_init' );
+
+  function my_mce_before_init( $settings ) {
+
+    $style_formats = array(
+      array(
+        'title' => 'Navy Text',
+        'classes' => 'navy-text', // add this class to it
+        'block' => 'div',
+        'wrapper' => true,
+      ),
+      array(
+        'title' => 'Gray Italic Subhead',
+        'classes' => 'gray-em', // add this class to it
+        'block' => 'div',
+        'wrapper' => true,
+      ),
+      array(
+        'title' => 'Red Button',
+        'selector' => 'a',
+        'classes' => 'red-button',
+      )
+    );
+
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+
+  }
   // Tell the TinyMCE editor to use a custom stylesheet
   add_editor_style('/assets/css/editor-style.css');
 }

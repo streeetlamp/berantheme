@@ -824,7 +824,7 @@ a.bg-danger:hover {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid none;
 }
 ul,
 ol {
@@ -6082,6 +6082,42 @@ a {
   font-style: normal;
   font-size: 42px;
 }
+.navy-text {
+  color: #1b4164;
+  font-family: "AvenirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.navy-text em {
+  font-family: 'AvenirBoldItalic';
+}
+.gray-em {
+  color: #599495;
+  font-family: 'AvenirItalic', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+  clear: both;
+}
+a.red-button {
+  width: 100%;
+  background: #f16155;
+  display: block;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: 18px;
+  letter-spacing: .075em;
+}
+a.red-button:hover {
+  text-decoration: none;
+  background: #ed3526;
+}
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -6106,6 +6142,8 @@ a {
 }
 .navbar-default .navbar-nav > li > a:hover {
   z-index: 999;
+  background: #f16155;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a:hover:after {
   display: none !important;
@@ -6119,6 +6157,12 @@ a {
   height: 12px;
   width: 2px;
   background: #c8bab2;
+}
+.navbar-default .navbar-nav > li.active {
+  z-index: 99;
+}
+.navbar-default .navbar-nav > li.active > a:after {
+  background: transparent;
 }
 .navbar-default .navbar-nav > li.social-menu > a {
   border-right: none;
@@ -6141,9 +6185,16 @@ a {
 }
 .navbar-default .navbar-nav > li.phone-num > a {
   color: #f16155;
+  font-size: 16px;
+}
+.navbar-default .navbar-nav > li.phone-num > a:hover {
+  background: transparent;
 }
 body.home .navbar {
   margin-bottom: 0;
+}
+.navbar-static-top {
+  border: none;
 }
 /* ==========================================================================
    Homepage Content
@@ -6228,8 +6279,62 @@ body.home .navbar {
   float: right;
 }
 /* ==========================================================================
-   Content
+   Page Content
    ========================================================================== */
+.page-header {
+  color: #599495;
+  text-transform: uppercase;
+}
+body.page .content {
+  font-size: 16px;
+  line-height: 1.65;
+}
+body.page .content img {
+  max-width: 100%;
+  height: auto;
+}
+body.page .content img.alignleft {
+  margin: 0 20px 20px 0;
+}
+.page-gallery-item {
+  border-top: solid 1px #bbaba2;
+  padding: 20px 0;
+  border-bottom: solid 1px #bbaba2;
+  margin-top: 20px;
+}
+.page-gallery-item img {
+  width: 100%;
+  height: auto;
+}
+ul.sl-map-list {
+  margin: 40px 0 -200px 0;
+  font-family: "AvenirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #599495;
+}
+ul.sl-map-list a {
+  text-transform: lowercase;
+}
+ul.sl-map-list li {
+  margin-bottom: 15px;
+}
+#sl-map {
+  background-size: cover !important;
+  position: relative;
+  z-index: -1;
+}
+#sl-map.highlighted img {
+  opacity: 0;
+}
+#residents-club {
+  margin: 20px 0 40px 0;
+  display: none;
+}
+.sponsor-logos {
+  margin-top: 2em;
+}
 /* ==========================================================================
    Primary Content
    ========================================================================== */
