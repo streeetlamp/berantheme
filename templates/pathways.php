@@ -16,7 +16,7 @@
               <?php the_post_thumbnail('full'); ?>
               <h4><?php echo roots_title(); ?></h4>
               <?php the_field('featured_listing_text'); ?>
-              <span><a href="<?php the_permalink(); ?>">MORE ></a></span>
+              <a href="<?php the_permalink(); ?>">MORE ></a>
             </div>
 
         <?php }
@@ -42,7 +42,7 @@
               <?php the_post_thumbnail('full'); ?>
               <h4><?php echo roots_title(); ?></h4>
               <?php the_field('featured_text'); ?>
-              <span><a href="<?php the_permalink(); ?>">MORE ></a></span>
+              <a href="<?php the_permalink(); ?>">MORE ></a>
             </div>
         <?php }
       } wp_reset_postdata(); ?>

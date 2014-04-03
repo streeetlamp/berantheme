@@ -21,6 +21,12 @@
     </div>
   <?php endif; ?>
 
+  <?php if( get_field('floor_plan') ): ?>
+    <div id="floorplan-img" style="background: url(<?php the_field('floor_plan'); ?>);">
+      <img src="<?php the_field('floor_plan'); ?>" />
+    </div>
+  <?php endif; ?>
+
 <?php endif; ?>
 
 <?php $images = get_field('page_image_gallery');

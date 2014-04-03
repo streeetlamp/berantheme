@@ -92,6 +92,7 @@ a {
    font-weight: normal;
    font-style: normal;
    font-size: ceil((@font-size-base * 3.0));
+   -webkit-font-smoothing: antialiased;
 }
 .navy-text {
    color: @beran-navy;
@@ -110,6 +111,7 @@ a {
    font-size: @font-size-h4;
    display: block;
    clear: both;
+   margin-top: 20px;
 }
 a.red-button {
    width: 100%;
@@ -160,7 +162,7 @@ a.red-button {
 .navbar-default .navbar-nav > li > a:after {
    content : "";
    position: absolute;
-   left    : -2px;
+   right    : -2px;
    bottom  : 20px;
    height  : 12px;
    width   : 2px;
@@ -169,7 +171,7 @@ a.red-button {
 .navbar-default .navbar-nav > li.active {
    z-index: 99;
 }
-.navbar-default .navbar-nav > li.active > a:after {
+.navbar-default .navbar-nav > li.open > a:after {
    background: transparent;
 }
 .navbar-default .navbar-nav > li.social-menu > a {
@@ -177,7 +179,7 @@ a.red-button {
    background: @beran-tan;
    border-radius: 50%;
    padding: .4em .6em;
-   margin-left: 10px;
+   margin-left: 12px;
    margin-top: 7px;
    color: white;
    &:after {
@@ -204,14 +206,20 @@ body.home .navbar {
 .navbar-static-top {
    border: none;
 }
+.navbar-nav > li > .dropdown-menu {
+   border-radius: 0px;
+   text-transform: uppercase;
+   border-top: none;
+   padding: 10px 0;
+   box-shadow: inset 0 7px 7px -7px #555;
+}
 
 /* ==========================================================================
    Homepage Content
    ========================================================================== */
 .slider-wrapper {
-   #gradient.vertical(#FEFFFE; #D3EDE7; 0%; 75%);
+   #gradient.vertical(#FEFEFE; #DCF1EC; 5%; 95%);
    width: 100%;
-   box-shadow: inset 0 -10px 10px -10px #555;
 }
 .royalSlider {
   width: 100%;
@@ -219,10 +227,17 @@ body.home .navbar {
   max-width: 1080px;
   margin: 0 auto;
 }
+.rsImg {
+   position: relative;
+   z-index: -1;
+}
 #pathways {
-   box-shadow: 0 10px 10px -10px #555;
-   padding: 40px 0;
+   box-shadow: 0 10px 10px -10px #555,
+   0px -10px 10px -10px #555;
+   padding: 0 0 40px 0;
    margin-bottom: 65px;
+   position: relative;
+   z-index: 999;
    .container {
       margin: 0 auto;
    }
@@ -231,6 +246,9 @@ body.home .navbar {
    h4 {
       color: @beran-brown;
       margin-top: 20px;
+   }
+   a {
+      display: block;
    }
 }
 #home-content {
@@ -300,9 +318,16 @@ body.page .content {
       max-width: 100%;
       height: auto;
    }
+   img.wp-post-image {
+      margin-top: 45px;
+   }
 }
+
 body.page .content img.alignleft {
    margin: 0 20px 20px 0;
+   &.wp-image-88 {
+      margin-top: -15px;
+   }
 }
 .content { }
 
@@ -326,7 +351,25 @@ ul.sl-map-list {
       text-transform: lowercase;
    }
    li {
+      list-style: none;
       margin-bottom: 15px;
+      padding-left: 40px;
+      min-height: 30px;
+      &.highlight-item {
+         background: url(../img/list_01.png);
+         background-repeat: no-repeat;
+         background-size: 30px 28px;
+      }
+      &.residentsclub-item{
+         background: url(../img/list_02.png);
+         background-repeat: no-repeat;
+         background-size: 30px 28px;
+      }
+      &.future-item{
+         background: url(../img/list_03.png);
+         background-repeat: no-repeat;
+         background-size: 30px 28px;
+      }
    }
 }
 
@@ -343,6 +386,19 @@ ul.sl-map-list {
 #residents-club {
    margin: 20px 0 40px 0;
    display: none;
+}
+#floorplan-img {
+   border-top: solid 1px @beran-tan;
+   padding: 20px 0;
+   border-bottom: solid 1px @beran-tan;
+   margin-top: 20px;
+   background-size: cover !important;
+   position: relative;
+   img {
+      opacity: 0;
+      z-index: -1;
+      position: relative;
+   }
 }
 .sponsor-logos {
    margin-top: 2em;
@@ -393,7 +449,7 @@ ul.sl-map-list {
 .social-icon {
    display: inline-block;
    background: @beran-tan;
-   padding: .35em .65em;
+   padding: .325em .625em;
    border-radius: 50%;
    font-size: 1.75em;
    margin-right: .25em;
