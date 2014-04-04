@@ -23,7 +23,7 @@ $pagefeed = $facebook->api("/" . $pageid . "/feed"); ?>
 }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-sm-2">
         <div class="fb-like" data-href="https://www.facebook.com/TheBeranGroup" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
       </div>
       <div class="col-md-10">
@@ -54,10 +54,10 @@ foreach($pagefeed['data'] as $post) {
 
             // check if post type is a link
             if ($post['type'] == 'link') {
-              echo "<div class=\"col-md-2 fb-img\">";
+              echo "<div class=\"col-sm-2 fb-img\">";
                 echo "<img src=\"" . $post['picture'] . "\">";
               echo "</div>";
-              echo "<div class=\"col-md-10\">";
+              echo "<div class=\"col-sm-10\">";
                 echo "<p>" . $post['message'] . "</p>";
                 echo "<p><a href=\"" . $post['link'] . "\" target=\"_blank\">" . $post['link'] . "</a></p>";
               echo "</div>";

@@ -137,6 +137,10 @@ a.red-button {
 .banner {
    padding-top: 25px;
    box-shadow: 0 10px 10px -10px #555;
+   img {
+      max-width: 100%;
+      height: auto;
+   }
 }
 .navbar-branding {
    margin-bottom: 5px;
@@ -148,8 +152,7 @@ a.red-button {
 .navbar-default .navbar-nav > li > a {
    .strong;
    text-transform: uppercase;
-   font-size: 14px;
-   letter-spacing: .05em;
+   font-size: 12px;
    &:hover {
       z-index: 999;
       background: @brand-success;
@@ -194,7 +197,7 @@ a.red-button {
 }
 .navbar-default .navbar-nav > li.phone-num > a {
    color: @brand-success;
-   font-size: 16px;
+   font-size: 14px;
    &:hover {
       background: transparent;
    }
@@ -223,6 +226,7 @@ body.home .navbar {
 }
 .royalSlider {
   width: 100%;
+  padding: 0;
   height: 555px;
   max-width: 1080px;
   margin: 0 auto;
@@ -449,10 +453,11 @@ ul.sl-map-list {
 .social-icon {
    display: inline-block;
    background: @beran-tan;
-   padding: .325em .625em;
+   padding: .28em .48em;
    border-radius: 50%;
-   font-size: 1.75em;
-   margin-right: .25em;
+   font-size: 1.7em;
+   margin-right: .2em;
+   line-height: 1.15;
    i {
       color: @footer-bg;
       margin: 0;
@@ -460,6 +465,7 @@ ul.sl-map-list {
    }
    .fa-facebook {
       padding: .1em .25em;
+      margin-right: 0;
    }
 }
 .footer-logos {
@@ -498,9 +504,32 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) { }
+@media (min-width: @screen-sm-min) {
+.navbar-default .navbar-nav > li.social-menu > a {
+      .hide;
+   }
+   .newsletter-form {
+      margin-top: 40px;
+   }
+}
 
-@media (min-width: @screen-md-min) { }
+@media (min-width: @screen-md-min) {
+.navbar-default .navbar-nav > li.social-menu > a {
+      .show;
+      font-size: 16px;
+   }
+   .newsletter-form {
+      margin-top: 0px;
+   }
+}
 
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-lg-min) {
+   .navbar-default .navbar-nav > li > a {
+      font-size: 14px;
+      letter-spacing: .01em;
+   }
+   .navbar-default .navbar-nav > li.phone-num > a {
+      font-size: 16px;
+   }
+}
 

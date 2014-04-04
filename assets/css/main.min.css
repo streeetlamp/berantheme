@@ -6127,6 +6127,10 @@ a.red-button:hover {
   padding-top: 25px;
   box-shadow: 0 10px 10px -10px #555555;
 }
+.banner img {
+  max-width: 100%;
+  height: auto;
+}
 .navbar-branding {
   margin-bottom: 5px;
 }
@@ -6139,8 +6143,7 @@ a.red-button:hover {
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: .05em;
+  font-size: 12px;
 }
 .navbar-default .navbar-nav > li > a:hover {
   z-index: 999;
@@ -6187,7 +6190,7 @@ a.red-button:hover {
 }
 .navbar-default .navbar-nav > li.phone-num > a {
   color: #f16155;
-  font-size: 16px;
+  font-size: 14px;
 }
 .navbar-default .navbar-nav > li.phone-num > a:hover {
   background: transparent;
@@ -6217,6 +6220,7 @@ body.home .navbar {
 }
 .royalSlider {
   width: 100%;
+  padding: 0;
   height: 555px;
   max-width: 1080px;
   margin: 0 auto;
@@ -6417,10 +6421,11 @@ ul.sl-map-list li.future-item {
 .social-icon {
   display: inline-block;
   background: #bbaba2;
-  padding: .325em .625em;
+  padding: .28em .48em;
   border-radius: 50%;
-  font-size: 1.75em;
-  margin-right: .25em;
+  font-size: 1.7em;
+  margin-right: .2em;
+  line-height: 1.15;
 }
 .social-icon i {
   color: #42555d;
@@ -6429,6 +6434,7 @@ ul.sl-map-list li.future-item {
 }
 .social-icon .fa-facebook {
   padding: .1em .25em;
+  margin-right: 0;
 }
 .footer-logos {
   margin-top: 2em;
@@ -6474,3 +6480,29 @@ figure.alignnone {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav > li.social-menu > a {
+    display: none !important;
+  }
+  .newsletter-form {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav > li.social-menu > a {
+    display: block !important;
+    font-size: 16px;
+  }
+  .newsletter-form {
+    margin-top: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-default .navbar-nav > li > a {
+    font-size: 14px;
+    letter-spacing: .01em;
+  }
+  .navbar-default .navbar-nav > li.phone-num > a {
+    font-size: 16px;
+  }
+}

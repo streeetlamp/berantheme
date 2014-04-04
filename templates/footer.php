@@ -1,7 +1,7 @@
 <footer class="content-info" role="contentinfo">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-sm-5">
         <?php if(get_field('google+', 'option' ) != ""): ?><a href="<?php the_field('google+', 'option'); ?>" class="social-icon"><i class="fa fa-google-plus"></i></a><?php endif; ?>
         <a href="feed/" class="social-icon"><i class="fa fa-rss"></i></a>
         <?php if(get_field('twitter', 'option' ) != ""): ?><a href="<?php the_field('twitter', 'option'); ?>" class="social-icon"><i class="fa fa-twitter"></i></a><?php endif; ?>
@@ -13,7 +13,7 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="col-md-offset-1 col-md-7">
+      <div class="col-sm-7">
         <h5><?php echo get_bloginfo ( 'description' );  ?></h5>
         <div class="contact-info">
           <section class="address">
