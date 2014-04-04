@@ -56,7 +56,7 @@ var Roots = {
       // JavaScript to be fired on the home page
       $("#beranSlider").royalSlider({
             keyboardNavEnabled: true,
-            imgHeight: 555,
+            imgWidth: 1080,
             autoScaleSlider: true,
             imageAlignCenter: true,
             randomizeSlides: true,

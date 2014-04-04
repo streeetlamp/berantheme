@@ -6216,7 +6216,6 @@ body.home .navbar {
   background-image: linear-gradient(to bottom, #fefefe 5%, #dcf1ec 95%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#ffdcf1ec', GradientType=0);
-  width: 100%;
 }
 .royalSlider {
   width: 100%;
