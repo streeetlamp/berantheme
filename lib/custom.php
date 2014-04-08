@@ -38,6 +38,23 @@ function beran_tagline_upload( $wp_customize ) {
 }
 add_action('customize_register', 'beran_tagline_upload');
 
+function beran_mobile_tagline_upload( $wp_customize ) {
+    $wp_customize->add_section( 'beran_mobile_tagline_section' , array(
+    'title'       => __( 'Mobile Tagline Image', 'beran_mobile_tagline_upload' ),
+    'priority'    => 40,
+    'description' => 'Upload a tagline image for the mobile footer',
+    ) );
+
+    $wp_customize->add_setting( 'beran_mobile_tagline_upload' );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'beran_mobile_tagline_upload', array(
+    'label'    => __( 'Mobile Tagline Image', 'beran_tagline_upload' ),
+    'section'  => 'beran_mobile_tagline_section',
+    'settings' => 'beran_mobile_tagline_upload',
+    ) ) );
+}
+add_action('customize_register', 'beran_mobile_tagline_upload');
+
 add_filter( 'wp_nav_menu_items', 'social_menu', 10, 2 );
 function social_menu ( $items, $args ) {
     if ($args->theme_location == 'primary_navigation') {

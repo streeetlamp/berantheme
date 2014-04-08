@@ -1,7 +1,7 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
     <div class="row navbar-branding">
-      <div class="col-sm-6">
+      <div class="col-xs-12 col-sm-6">
         <?php if ( get_theme_mod( 'beran_logo_upload' ) ) : ?>
         <div class="beran-logo">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'beran_logo_upload' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
@@ -12,7 +12,7 @@
           </hgroup>
         <?php endif; ?>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 visible-md visible-lg">
         <?php if ( get_theme_mod( 'beran_tagline_upload' ) ) : ?>
         <div class="beran-tagline">
             <img src="<?php echo get_theme_mod( 'beran_tagline_upload' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">

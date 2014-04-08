@@ -22,16 +22,16 @@ $pagefeed = $facebook->api("/" . $pageid . "/feed"); ?>
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="row">
+    <div class="row visible-md visible-lg">
       <div class="col-sm-2">
         <div class="fb-like" data-href="https://www.facebook.com/TheBeranGroup" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-10 visible-md visible-lg">
         <h3>JOIN THE CONVERSATION</h3>
       </div>
     </div>
 
-    <p>Like us on Facebook, Follow us on Twitter and Pinterest or read our blog and hear about our latest listings, home decor, building tips and more.</p>
+    <p class="visible-md visible-lg">Like us on Facebook, Follow us on Twitter and Pinterest or read our blog and hear about our latest listings, home decor, building tips and more.</p>
 
 <?php
 
@@ -42,7 +42,7 @@ foreach($pagefeed['data'] as $post) {
     if ($post['type'] == 'status' || $post['type'] == 'link' || $post['type'] == 'photo') {
 
         // open up an fb-update div
-        echo "<div class=\"fb-update row\">";
+        echo "<div class=\"fb-update visible-md visible-lg row\">";
 
             // post the time
 

@@ -1,7 +1,14 @@
 <footer class="content-info" role="contentinfo">
   <div class="container">
     <div class="row">
-      <div class="col-sm-5">
+      <div class="col-xs-12">
+        <?php if ( get_theme_mod( 'beran_mobile_tagline_upload' ) ) : ?>
+        <div class="beran-mobile-tagline visible-xs">
+            <img src="<?php echo get_theme_mod( 'beran_mobile_tagline_upload' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+        </div>
+        <?php endif; ?>
+      </div>
+      <div class="col-xs-12 col-sm-5 footer-social">
         <?php if(get_field('google+', 'option' ) != ""): ?><a href="<?php the_field('google+', 'option'); ?>" class="social-icon"><i class="fa fa-google-plus"></i></a><?php endif; ?>
         <a href="feed/" class="social-icon"><i class="fa fa-rss"></i></a>
         <?php if(get_field('twitter', 'option' ) != ""): ?><a href="<?php the_field('twitter', 'option'); ?>" class="social-icon"><i class="fa fa-twitter"></i></a><?php endif; ?>
@@ -13,7 +20,7 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="col-sm-7">
+      <div class="col-xs-12 col-sm-7 footer-blogdesc">
         <h5><?php echo get_bloginfo ( 'description' );  ?></h5>
         <div class="contact-info">
           <section class="address">

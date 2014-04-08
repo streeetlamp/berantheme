@@ -6154,39 +6154,11 @@ a.red-button:hover {
   display: none !important;
   visibility: hidden !important;
 }
-.navbar-default .navbar-nav > li > a:after {
-  content: "";
-  position: absolute;
-  right: -2px;
-  bottom: 20px;
-  height: 12px;
-  width: 2px;
-  background: #c8bab2;
-}
 .navbar-default .navbar-nav > li.active {
   z-index: 99;
 }
-.navbar-default .navbar-nav > li.open > a:after {
+.navbar-default .navbar-nav > li.active > a:after {
   background: transparent;
-}
-.navbar-default .navbar-nav > li.social-menu > a {
-  border-right: none;
-  background: #bbaba2;
-  border-radius: 50%;
-  padding: .4em .6em;
-  margin-left: 12px;
-  margin-top: 7px;
-  color: white;
-}
-.navbar-default .navbar-nav > li.social-menu > a:after {
-  display: none !important;
-  visibility: hidden !important;
-}
-.navbar-default .navbar-nav > li.social-menu.menu-facebook > a {
-  padding: .4em .85em;
-}
-.navbar-default .navbar-nav > li.social-menu.menu-rss > a {
-  padding: .4em .65em;
 }
 .navbar-default .navbar-nav > li.phone-num > a {
   color: #f16155;
@@ -6207,6 +6179,26 @@ body.home .navbar {
   border-top: none;
   padding: 10px 0;
   box-shadow: inset 0 7px 7px -7px #555555;
+}
+.navbar-default .navbar-nav > li.social-menu {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+.navbar-default .navbar-nav > li.social-menu > a {
+  border-right: none;
+  background: #bbaba2;
+  border-radius: 50%;
+  padding: .4em .7em;
+  margin-left: 12px;
+  margin-top: 7px;
+  color: white;
+}
+.navbar-default .navbar-nav > li.social-menu > a:after {
+  display: none !important;
+  visibility: hidden !important;
+}
+.navbar-default .navbar-nav > li.social-menu.menu-facebook > a {
+  padding: .4em .9em;
 }
 /* ==========================================================================
    Homepage Content
@@ -6229,6 +6221,10 @@ body.home .navbar {
   z-index: -1;
 }
 #pathways {
+  background-image: -webkit-linear-gradient(top, #fbfefd 20%, #dcf0ed 80%);
+  background-image: linear-gradient(to bottom, #fbfefd 20%, #dcf0ed 80%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbfefd', endColorstr='#ffdcf0ed', GradientType=0);
   box-shadow: 0 10px 10px -10px #555555, 0px -10px 10px -10px #555555;
   padding: 0 0 40px 0;
   margin-bottom: 65px;
@@ -6238,6 +6234,10 @@ body.home .navbar {
 #pathways .container {
   margin: 0 auto;
 }
+#pathways img {
+  width: 100%;
+  height: auto;
+}
 .pathways-item h4 {
   color: #874a2b;
   margin-top: 20px;
@@ -6245,16 +6245,17 @@ body.home .navbar {
 .pathways-item a {
   display: block;
 }
-#home-content {
-  border-bottom: solid 1px #999999;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-}
 .home-copy {
   font-size: 20px;
   line-height: 1.75;
 }
 .track-record {
+  border-top: solid 2px #c8bab2;
+  padding-top: 2em;
+  margin-top: 2em;
+  border-bottom: solid 2px #c8bab2;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
   color: #77787b;
 }
 .track-record h3 {
@@ -6308,10 +6309,6 @@ body.home .navbar {
 body.page .content {
   font-size: 16px;
   line-height: 1.65;
-}
-body.page .content img {
-  max-width: 100%;
-  height: auto;
 }
 body.page .content img.wp-post-image {
   margin-top: 45px;
@@ -6443,6 +6440,10 @@ ul.sl-map-list li.future-item {
   font-weight: 700;
   font-style: normal;
 }
+.footer-blogdesc {
+  text-align: center;
+  margin-top: 2em;
+}
 .contact-divider {
   height: 10px;
   width: 7px;
@@ -6457,6 +6458,13 @@ ul.sl-map-list li.future-item {
 .fax-number,
 .phone-number {
   font-size: 20px;
+}
+.beran-mobile-tagline {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.footer-social {
+  text-align: center;
 }
 /* ==========================================================================
    WordPress Generated Classes
@@ -6486,14 +6494,65 @@ figure.alignnone {
   .newsletter-form {
     margin-top: 40px;
   }
+  .navbar-default .navbar-nav > li > a:after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    bottom: 20px;
+    height: 12px;
+    width: 2px;
+    background: #c8bab2;
+  }
+  .track-record {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .footer-blogdesc {
+    margin-top: 0;
+    text-align: left;
+  }
 }
 @media (min-width: 992px) {
+  .navbar-default .navbar-nav > li.social-menu {
+    margin-bottom: 0;
+  }
   .navbar-default .navbar-nav > li.social-menu > a {
     display: block !important;
     font-size: 16px;
   }
   .newsletter-form {
     margin-top: 0px;
+  }
+  .navbar-default .navbar-nav > li.social-menu > a {
+    border-right: none;
+    background: #bbaba2;
+    border-radius: 50%;
+    padding: .4em .6em;
+    margin-left: 12px;
+    margin-top: 7px;
+    color: white;
+  }
+  .navbar-default .navbar-nav > li.social-menu > a:after {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .navbar-default .navbar-nav > li.social-menu.menu-facebook > a {
+    padding: .4em .85em;
+  }
+  .navbar-default .navbar-nav > li.social-menu.menu-rss > a {
+    padding: .4em .65em;
+  }
+  #pathways {
+    background-color: white;
+    background-image: none;
+  }
+  #home-content {
+    border-bottom: solid 1px #999999;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 1200px) {

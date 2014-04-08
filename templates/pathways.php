@@ -12,7 +12,7 @@
         while ( $query->have_posts() ) {
           $query->the_post(); ?>
 
-            <div class="col-sm-4 pathways-item">
+            <div class="col-xs-12 col-sm-4 pathways-item">
               <?php the_post_thumbnail('full'); ?>
               <h4><?php echo roots_title(); ?></h4>
               <?php the_field('featured_listing_text'); ?>
@@ -38,7 +38,7 @@
       if ( $query->have_posts() ) {
         while ( $query->have_posts() ) {
           $query->the_post(); ?>
-            <div class="col-sm-4 pathways-item">
+            <div class="col-xs-12 col-sm-4  pathways-item">
               <?php the_post_thumbnail('full'); ?>
               <h4><?php echo roots_title(); ?></h4>
               <?php the_field('featured_text'); ?>
