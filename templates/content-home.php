@@ -18,10 +18,19 @@
           </div>
           <div class="col-md-4 col-sm-12 newsletter-form">
             <h4>Sign up for up-to-the-minute listings, news and advice.</h4>
-            <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="Enter Email Address">
-              <span class="glyphicon glyphicon-chevron-right form-control-feedback"></span>
-            </div>
+              <div id="mc_embed_signup">
+                <form action="http://theberangroup.us8.list-manage.com/subscribe/post?u=cc81e067058b767efb1fb26be&amp;id=e39baaebbb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" role="form">
+                  <div class="form-group">
+                    <input id="mce-EMAIL" type="email" class="form-control required email" name="EMAIL" placeholder="Enter Email Address">
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                  </div>
+                  <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-newsletter"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_cc81e067058b767efb1fb26be_e39baaebbb" value=""></div>
+                </form>
+              </div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/birdnest.png" class="birdnest">
           </div>
         </div>

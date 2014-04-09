@@ -58,11 +58,12 @@ add_action('customize_register', 'beran_mobile_tagline_upload');
 add_filter( 'wp_nav_menu_items', 'social_menu', 10, 2 );
 function social_menu ( $items, $args ) {
     if ($args->theme_location == 'primary_navigation') {
-        $items .= '<li class="menu-google social-menu"><a href="https://plus.google.com/+user/"><i class="fa fa-google-plus"></i></a></li>
+        $items .= '
+            <li class="menu-google social-menu"><a href="https://plus.google.com/110639739214280984274/posts"><i class="fa fa-google-plus"></i></a></li>
             <li class="menu-rss social-menu"><a href="feed/"><i class="fa fa-rss"></i></a></li>
-            <li class="menu-twitter social-menu"><a href="http://www.twitter.com/user/"><i class="fa fa-twitter"></i></a></li>
-            <li class="menu-pinterest social-menu"><a href="http://www.pinterest.com/user/"><i class="fa fa-pinterest"></i></a></li>
-            <li class="menu-facebook social-menu"><a href="http://www.facebook.com/user/"><i class="fa fa-facebook"></i></a></li>
+            <li class="menu-twitter social-menu"><a href="https://twitter.com/TheBeranGroup"><i class="fa fa-twitter"></i></a></li>
+            <li class="menu-pinterest social-menu"><a href="http://www.pinterest.com/theberangroup/"><i class="fa fa-pinterest"></i></a></li>
+            <li class="menu-facebook social-menu"><a href="https://www.facebook.com/TheBeranGroup"><i class="fa fa-facebook"></i></a></li>
         ';
     }
     return $items;

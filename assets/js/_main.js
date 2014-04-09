@@ -62,6 +62,7 @@ var Roots = {
             randomizeSlides: true,
             transitionType: 'fade',
             sliderDrag: false,
+            arrowsNav: false,
             imageScalePadding: 0,
             autoPlay: {
               enabled: true,

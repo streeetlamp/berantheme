@@ -161,6 +161,9 @@ a.red-button {
          .hidden;
       }
    }
+   em {
+      font-family: 'AvenirBoldItalic';
+   }
 }
 .navbar-default .navbar-nav > li.active {
    z-index: 99;
@@ -197,19 +200,20 @@ body.home .navbar {
    border-right: none;
    background: @beran-tan;
    border-radius: 50%;
-   padding: .4em .7em;
+   padding: 0;
+   height: 35px;
+   width: 35px;
    margin-left: 12px;
-   margin-top: 7px;
+   margin-top: 6px;
+   text-align: center;
    color: white;
    &:after {
          .hidden;
    }
-}
-.navbar-default .navbar-nav > li.social-menu.menu-facebook > a {
-   padding: .4em .9em;
-}
-.navbar-default .navbar-nav > li.social-menu.menu-rss > a {
-
+   i {
+      font-size: 16px;
+      line-height: 2.1;
+   }
 }
 
 /* ==========================================================================
@@ -224,6 +228,9 @@ body.home .navbar {
   height: 555px;
   max-width: 1080px;
   margin: 0 auto;
+  a {
+   display: block;
+  }
 }
 .rsImg {
    position: relative;
@@ -300,13 +307,17 @@ body.home .navbar {
          margin-top: -50%;
       }
    }
-   .form-control-feedback {
-      top: 0;
-      color: @brand-success;
-   }
 }
 .birdnest {
    float: right;
+}
+.btn-newsletter {
+   background: @gray-lighter;
+   width: 100%;
+   text-align: right;
+   span {
+      color: @brand-success;
+   }
 }
 /* ==========================================================================
    Page Content
@@ -343,12 +354,16 @@ body.page .content img.alignleft {
 }
 
 ul.sl-map-list {
-   margin: 40px 0 -200px 0;
+   margin: 115px 0 0 0;
    .strong;
    text-transform: uppercase;
    color: @title-gray;
+   padding: 0 0 0 20px;
    a {
       text-transform: lowercase;
+   }
+   em {
+      font-family: 'AvenirBoldItalic';
    }
    li {
       list-style: none;
@@ -374,9 +389,7 @@ ul.sl-map-list {
 }
 
 #sl-map {
-   background-size: cover !important;
-   position: relative;
-   z-index: -1;
+   background-size: contain !important;
    &.highlighted {
       img {
       opacity: 0;
@@ -392,7 +405,8 @@ ul.sl-map-list {
    padding: 20px 0;
    border-bottom: solid 1px @beran-tan;
    margin-top: 20px;
-   background-size: cover !important;
+   background-size: contain !important;
+   background-repeat: no-repeat !important;
    position: relative;
    img {
       opacity: 0;
@@ -402,6 +416,17 @@ ul.sl-map-list {
 }
 .sponsor-logos {
    margin-top: 2em;
+}
+.sl-facebook {
+   margin-left: 20px;
+   line-height: .85;
+   h4 {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 20px;
+      padding-top: 5px;
+      color: @brand-success;
+   }
 }
 
 /* ==========================================================================
@@ -482,11 +507,8 @@ ul.sl-map-list {
    border-radius: 50%;
    background: @beran-tan;
 }
-.fax {
-   margin-left: 20px;
-}
 .fax-number, .phone-number {
-   font-size: 20px;
+   font-size: 18px;
 }
 .beran-mobile-tagline {
    text-align: center;
@@ -538,6 +560,31 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       margin-top: 0;
       text-align: left;
    }
+   .btn-newsletter {
+      height: 48px;
+      border-radius: 0;
+      border: 1px solid #bbaba2;
+      background: white;
+      border-left: none;
+      margin-left: -5px;
+      padding: 0 20px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      width: inherit;
+      &:hover {
+         background: @gray-lighter;
+      }
+      span {
+         color: @brand-success;
+      }
+   }
+   #mce-EMAIL {
+      border-right: none;
+      margin-right: 0;
+   }
+   .footer-social {
+      text-align: left;
+   }
 }
 
 @media (min-width: @screen-md-min) {
@@ -546,28 +593,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    }
    .navbar-default .navbar-nav > li.social-menu > a {
       .show;
-      font-size: 16px;
    }
    .newsletter-form {
       margin-top: 0px;
-   }
-   .navbar-default .navbar-nav > li.social-menu > a {
-      border-right: none;
-      background: @beran-tan;
-      border-radius: 50%;
-      padding: .4em .6em;
-      margin-left: 12px;
-      margin-top: 7px;
-      color: white;
-      &:after {
-         .hidden;
-      }
-   }
-   .navbar-default .navbar-nav > li.social-menu.menu-facebook > a {
-      padding: .4em .85em;
-   }
-   .navbar-default .navbar-nav > li.social-menu.menu-rss > a {
-      padding: .4em .65em;
    }
    #pathways {
       background-color: white;

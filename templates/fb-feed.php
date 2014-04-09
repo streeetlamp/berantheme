@@ -26,7 +26,7 @@ $pagefeed = $facebook->api("/" . $pageid . "/feed"); ?>
       <div class="col-sm-2">
         <div class="fb-like" data-href="https://www.facebook.com/TheBeranGroup" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
       </div>
-      <div class="col-md-10 visible-md visible-lg">
+      <div class="col-md-10 visible-md visible-lg" style="padding-left:0;">
         <h3>JOIN THE CONVERSATION</h3>
       </div>
     </div>
