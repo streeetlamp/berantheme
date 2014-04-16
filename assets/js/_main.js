@@ -26,6 +26,10 @@ var Roots = {
         delay: 0
       });
 
+      jQuery('#cff a.view-comments').on('click', function(){
+        jQuery(this).closest('.cff-item').find('.comments-box').slideToggle();
+      });
+
       $( ".highlight-click" ).click(function() {
         event.preventDefault();
         $( "#sl-map" ).toggleClass( "highlighted" );
@@ -59,7 +63,7 @@ var Roots = {
             imgWidth: 1080,
             autoScaleSlider: true,
             imageAlignCenter: true,
-            randomizeSlides: true,
+            randomizeSlides: false,
             transitionType: 'fade',
             sliderDrag: false,
             arrowsNav: false,

@@ -138,16 +138,3 @@ class AutoSubmenu {
 }
 
 $auto_submenu = new AutoSubmenu();
-
-/************* FACEBOOK API *****************/
-
-require_once "fb-sdk/facebook.php";
-
-// connect to app
-$config = array();
-$config['appId'] = '670325379698989';
-$config['secret'] = 'b502dcb17bec03e89a5796de1b10eb8e';
-$config['fileUpload'] = false; // optional
-
-// instantiate
-$facebook = new Facebook($config);

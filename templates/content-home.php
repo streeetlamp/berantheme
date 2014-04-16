@@ -15,6 +15,7 @@
         <div id="social-feed" class="row">
           <div class="col-sm-12 col-md-8">
             <?php get_template_part('templates/fb-feed'); ?>
+            <?php echo do_shortcode("[facebook-feed]"); ?>
           </div>
           <div class="col-md-4 col-sm-12 newsletter-form">
             <h4>Sign up for up-to-the-minute listings, news and advice.</h4>

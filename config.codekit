@@ -51,6 +51,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/icons.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1288,
+		"inputAbbreviatedPath": "\/assets\/img\/icons.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/list_01.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -91,6 +102,17 @@
 		"initialSize": 3946,
 		"inputAbbreviatedPath": "\/assets\/img\/mapkeys.png",
 		"outputAbbreviatedPath": "\/assets\/img\/mapkeys.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/play.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1451,
+		"inputAbbreviatedPath": "\/assets\/img\/play.png",
+		"outputAbbreviatedPath": "\/assets\/img\/play.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
