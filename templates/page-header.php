@@ -1,9 +1,7 @@
-<div class="page-header">
+<div class="page-header col-sm-12">
   <h3>
     <?php if(get_field('page_header') != ""): ?>
       <?php the_field('page_header'); ?>
-    <?php else: ?>
-      <?php echo roots_title(); ?>
     <?php endif; ?>
   </h3>
   <?php if(get_field('page_subheader') != ""): ?>

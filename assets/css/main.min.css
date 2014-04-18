@@ -6123,6 +6123,7 @@ a {
   -webkit-font-smoothing: antialiased;
   color: #599495;
   line-height: .75;
+  margin-bottom: .5em;
 }
 .navy-text {
   color: #1b4164;
@@ -6144,6 +6145,11 @@ a {
   display: block;
   clear: both;
   margin-top: 20px;
+}
+.beran-red {
+  color: #f16155;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 a.red-button {
   width: 100%;
@@ -6368,6 +6374,7 @@ body.home .navbar {
   text-transform: uppercase;
   padding-bottom: 0;
   margin-bottom: 0;
+  margin-top: .75em;
 }
 body.page .content {
   font-size: 16px;
@@ -6487,6 +6494,9 @@ ul.sl-map-list li.future-item {
 /* ==========================================================================
    Primary Content
    ========================================================================== */
+.main {
+  padding-bottom: 2em;
+}
 /* Gallery Shortcode */
 .gallery-row {
   padding: 15px 0;
