@@ -6115,6 +6115,15 @@ a {
   font-size: 42px;
   -webkit-font-smoothing: antialiased;
 }
+.gray-scripty {
+  font-family: "Bickham", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 42px;
+  -webkit-font-smoothing: antialiased;
+  color: #599495;
+  line-height: .75;
+}
 .navy-text {
   color: #1b4164;
   font-family: "AvenirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6239,6 +6248,12 @@ body.home .navbar {
   font-size: 16px;
   line-height: 2.1;
 }
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #f16155;
+  background: transparent;
+}
 /* ==========================================================================
    Homepage Content
    ========================================================================== */
@@ -6351,6 +6366,8 @@ body.home .navbar {
 .page-header {
   color: #599495;
   text-transform: uppercase;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 body.page .content {
   font-size: 16px;
@@ -6362,8 +6379,26 @@ body.page .content img.wp-post-image {
 body.page .content img.alignleft {
   margin: 0 20px 20px 0;
 }
-body.page .content img.alignleft.wp-image-88 {
-  margin-top: -15px;
+body.parent-pageid-14 {
+  background-image: -webkit-linear-gradient(left, color-stop(#ffffff 0%), color-stop(#d8efeb 100%));
+  background-image: linear-gradient(to right, #ffffff 0%, #d8efeb 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffd8efeb', GradientType=1);
+}
+body.parent-pageid-14 .content-info {
+  margin-top: 0;
+}
+body.parent-pageid-14.southern-living {
+  background: white;
+}
+.newhomes-wrap {
+  background: white;
+  box-shadow: inset 0 7px 7px -7px #666666;
+  margin-top: 2em;
+  padding-bottom: 5em;
+}
+.newhomes-wrap img {
+  margin-top: -11em;
 }
 .page-gallery-item {
   border-top: solid 1px #bbaba2;
@@ -6549,6 +6584,9 @@ figure.alignnone {
 /**************/
 /* Feed container */
 /* Individual post item */
+#cff .cff-item {
+  overflow: hidden;
+}
 #cff .cff-item:first-child {
   padding-top: 0;
 }

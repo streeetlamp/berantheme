@@ -238,11 +238,7 @@ function display_cff($atts) {
 
             }
 
-            $post_link = $news->object_id;
-
             $content .= '<p class="cff-date">Posted '. cff_timeSince(strtotime($news->created_time)) . ' ago</p>';
-            $content .= '<a class="text-link" href="http://facebook.com/'. $page_id . '">View on Facebook</a>';
-            echo $post_link;
 
             //Make small images big
             if (!empty($news->picture)) {

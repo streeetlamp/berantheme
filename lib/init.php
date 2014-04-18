@@ -45,6 +45,12 @@ function roots_setup() {
         'wrapper' => true,
       ),
       array(
+        'title' => 'Gray Script',
+        'classes' => 'gray-scripty', // add this class to it
+        'block' => 'div',
+        'wrapper' => true,
+      ),
+      array(
         'title' => 'Red Button',
         'selector' => 'a',
         'classes' => 'red-button',

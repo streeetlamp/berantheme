@@ -39,6 +39,20 @@
 
   <?php endif; ?>
 
+  <?php if ( $post->post_parent == '14' ) : ?>
+    <?php if( get_field('new_homes_img') ): ?>
+    <div class="newhomes-wrap">
+      <div class="wrap container">
+        <div class="content row">
+          <div class="col-xs-12">
+            <img class="img-responsive" src="<?php the_field('new_homes_img'); ?>" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php endif; ?>
+  <?php endif; ?>
+
   <?php get_template_part('templates/footer'); ?>
 
 </body>
