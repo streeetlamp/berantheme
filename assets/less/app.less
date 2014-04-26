@@ -96,7 +96,7 @@ a {
 }
 .gray-scripty {
   .scripty;
-  color: @title-gray;
+  color: @beran-darkgray;
   line-height: .75;
   margin-bottom: .5em;
 }
@@ -119,10 +119,15 @@ a {
    clear: both;
    margin-top: 20px;
 }
-.beran-red {
-  color: @brand-success;
+.beran-headline, .beran-subheadline {
+  color: @title-gray;
+}
+body.parent-pageid-14 .beran-subheadline {
+  margin-bottom: 0;
+}
+.brown-pagetitle {
+  color: @beran-ltbrown;
   text-transform: uppercase;
-  font-size: @font-size-h4;
 }
 a.red-button {
    width: 100%;
@@ -351,7 +356,6 @@ body.page .content {
       margin-top: 45px;
    }
 }
-
 body.page .content img.alignleft {
    margin: 0 20px 20px 0;
 }
@@ -360,10 +364,51 @@ body.parent-pageid-14 {
   .content-info {
     margin-top: 0;
   }
+  &.building-advice {
+    background: white;
+  }
+}
+body.advice {
+  #gradient.horizontal(#FFFFFF; #D8EFEB; 0%; 100%);
+  .beran-headline {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .advice-postedon {
+    color: @beran-darkgray;
+  }
+  .advice-title {
+    margin-bottom: 0;
+  }
+  .advice-post-content {
+    margin-top: 20px;
+  }
+}
+ul.archives-list {
+  a {
+    color: @text-color;
+    font-family: "Avenir", @font-family-sans-serif;
+    font-weight: 400;
+  }
+}
+body.awards-recognition .content {
+  ul {
+    padding-left: 0;
+  }
+  li {
+    list-style: none;
+    background: url(../img/beranbullet.png);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    padding-left: 40px;
+    background-position: 0 3px;
+    margin-bottom: 2em;
+  }
 }
 body.parent-pageid-14.southern-living  {
   background: white;
 }
+
 .newhomes-wrap {
   background: white;
   box-shadow: inset 0 7px 7px -7px #666;
@@ -461,7 +506,22 @@ ul.sl-map-list {
       color: @brand-success;
    }
 }
-
+h4.member-name {
+  margin-bottom: 0;
+}
+p.member-bio {
+  margin: 20px 0 40px 0;
+}
+p.member-email {
+  margin-bottom: 0;
+}
+em.member-script {
+  .scripty;
+  font-size: 32px;
+}
+span.member-phone {
+  color: @title-gray;
+}
 /* ==========================================================================
    Primary Content
    ========================================================================== */

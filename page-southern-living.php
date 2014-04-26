@@ -5,7 +5,6 @@
   </div>
   <div class="col-xs-12 col-md-6">
     <?php the_post_thumbnail( 'full', array('class' => 'img-responsive')); ?>
-    <?php if ( is_page(81) ) : ?>
       <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -23,48 +22,30 @@
           <li class="residentsclub-item">The residents club — opening in 2014 <a class="residents-click" href="#residents-club">(click to view)</a></li>
           <li class="future-item">future development</li>
         </ul>
-      <?php endif; ?>
     </div>
 </div>
-<?php if ( is_page(81) ) : ?>
 
-  <?php if( get_field('map_image') ): ?>
-    <div id="sl-map" class="hidden-xs hidden-sm hidden-md" style="background: url(<?php the_field('map_image_highlight'); ?>);">
-      <img class="img-responsive" src="<?php the_field('map_image'); ?>" />
-    </div>
-  <?php endif; ?>
-
-  <?php if( get_field('residents_club') ): ?>
-    <div id="residents-club" class="hidden-xs hidden-sm hidden-md">
-      <img class="img-responsive" src="<?php the_field('residents_club'); ?>" />
-    </div>
-  <?php endif; ?>
-
-  <?php if( get_field('floor_plan') ): ?>
-    <div id="floorplan-img" style="background: url(<?php the_field('floor_plan'); ?>);">
-      <img class="img-responsive" src="<?php the_field('floor_plan'); ?>" />
-    </div>
-  <?php endif; ?>
-
+<?php if( get_field('map_image') ): ?>
+  <div id="sl-map" class="hidden-xs hidden-sm hidden-md" style="background: url(<?php the_field('map_image_highlight'); ?>);">
+    <img class="img-responsive" src="<?php the_field('map_image'); ?>" />
+  </div>
 <?php endif; ?>
 
-<?php $images = get_field('page_image_gallery');
-  if( $images ): ?>
-    <section class="page-gallery"><!-- page images -->
-      <?php foreach( $images as $image ): ?>
-        <div class="page-gallery-item">
-          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
-        </div>
-      <?php endforeach; ?>
-    </section><!-- project gallery -->
-  <?php endif; ?>
+<?php if( get_field('residents_club') ): ?>
+  <div id="residents-club" class="hidden-xs hidden-sm hidden-md">
+    <img class="img-responsive" src="<?php the_field('residents_club'); ?>" />
+  </div>
+<?php endif; ?>
 
-<?php if ( is_page(81) ) : ?>
+<?php if( get_field('floor_plan') ): ?>
+  <div id="floorplan-img" style="background: url(<?php the_field('floor_plan'); ?>);">
+    <img class="img-responsive" src="<?php the_field('floor_plan'); ?>" />
+  </div>
+<?php endif; ?>
 
-  <?php if( get_field('sponsor_logos') ): ?>
-    <div class="sponsor-logos">
-    <h4>THANKS TO OUR SPONSORS!</h4>
-      <img class="img-responsive" src="<?php the_field('sponsor_logos'); ?>" />
-    </div>
-  <?php endif; ?>
+<?php if( get_field('sponsor_logos') ): ?>
+  <div class="sponsor-logos">
+  <h4>THANKS TO OUR SPONSORS!</h4>
+    <img class="img-responsive" src="<?php the_field('sponsor_logos'); ?>" />
+  </div>
 <?php endif; ?>

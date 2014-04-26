@@ -6121,7 +6121,7 @@ a {
   font-style: normal;
   font-size: 42px;
   -webkit-font-smoothing: antialiased;
-  color: #599495;
+  color: #77787b;
   line-height: .75;
   margin-bottom: .5em;
 }
@@ -6146,10 +6146,16 @@ a {
   clear: both;
   margin-top: 20px;
 }
-.beran-red {
-  color: #f16155;
+.beran-headline,
+.beran-subheadline {
+  color: #599495;
+}
+body.parent-pageid-14 .beran-subheadline {
+  margin-bottom: 0;
+}
+.brown-pagetitle {
+  color: #a97357;
   text-transform: uppercase;
-  font-size: 18px;
 }
 a.red-button {
   width: 100%;
@@ -6395,6 +6401,45 @@ body.parent-pageid-14 {
 body.parent-pageid-14 .content-info {
   margin-top: 0;
 }
+body.parent-pageid-14.building-advice {
+  background: white;
+}
+body.advice {
+  background-image: -webkit-linear-gradient(left, color-stop(#ffffff 0%), color-stop(#d8efeb 100%));
+  background-image: linear-gradient(to right, #ffffff 0%, #d8efeb 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffd8efeb', GradientType=1);
+}
+body.advice .beran-headline {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+body.advice .advice-postedon {
+  color: #77787b;
+}
+body.advice .advice-title {
+  margin-bottom: 0;
+}
+body.advice .advice-post-content {
+  margin-top: 20px;
+}
+ul.archives-list a {
+  color: #3c444c;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+body.awards-recognition .content ul {
+  padding-left: 0;
+}
+body.awards-recognition .content li {
+  list-style: none;
+  background: url(../img/beranbullet.png);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  padding-left: 40px;
+  background-position: 0 3px;
+  margin-bottom: 2em;
+}
 body.parent-pageid-14.southern-living {
   background: white;
 }
@@ -6490,6 +6535,26 @@ ul.sl-map-list li.future-item {
   margin-top: 20px;
   padding-top: 5px;
   color: #f16155;
+}
+h4.member-name {
+  margin-bottom: 0;
+}
+p.member-bio {
+  margin: 20px 0 40px 0;
+}
+p.member-email {
+  margin-bottom: 0;
+}
+em.member-script {
+  font-family: "Bickham", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 42px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 32px;
+}
+span.member-phone {
+  color: #599495;
 }
 /* ==========================================================================
    Primary Content

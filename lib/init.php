@@ -51,10 +51,19 @@ function roots_setup() {
         'wrapper' => true,
       ),
       array(
-        'title' => 'Beran Red',
-        'classes' => 'beran-red', // add this class to it
-        'block' => 'div',
-        'wrapper' => true,
+        'title' => 'Brown Page Title',
+        'classes' => 'brown-pagetitle', // add this class to it
+        'block' => 'h4',
+      ),
+      array(
+        'title' => 'Headline',
+        'classes' => 'beran-headline', // add this class to it
+        'block' => 'h3',
+      ),
+      array(
+        'title' => 'Sub Headline',
+        'classes' => 'beran-subheadline', // add this class to it
+        'block' => 'h4',
       ),
       array(
         'title' => 'Red Button',
