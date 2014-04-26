@@ -6404,29 +6404,39 @@ body.parent-pageid-14 .content-info {
 body.parent-pageid-14.building-advice {
   background: white;
 }
-body.advice {
+body.advice,
+body.single {
   background-image: -webkit-linear-gradient(left, color-stop(#ffffff 0%), color-stop(#d8efeb 100%));
   background-image: linear-gradient(to right, #ffffff 0%, #d8efeb 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffd8efeb', GradientType=1);
 }
-body.advice .beran-headline {
+body.advice .beran-headline,
+body.single .beran-headline {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-body.advice .advice-postedon {
-  color: #77787b;
-}
-body.advice .advice-title {
+body.advice .advice-title,
+body.single .advice-title {
   margin-bottom: 0;
 }
-body.advice .advice-post-content {
+body.advice .advice-title a,
+body.single .advice-title a {
+  color: #a97357;
+}
+body.advice .advice-post-content,
+body.single .advice-post-content {
   margin-top: 20px;
 }
-ul.archives-list a {
-  color: #3c444c;
-  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+body.advice .advice-img,
+body.single .advice-img {
+  border: solid 4px white;
+  border-radius: 2px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.45);
+  margin-bottom: 15px;
+}
+body.single .advice-post {
+  margin-top: 20px;
 }
 body.awards-recognition .content ul {
   padding-left: 0;
@@ -6566,12 +6576,66 @@ span.member-phone {
 .gallery-row {
   padding: 15px 0;
 }
+time {
+  color: #77787b;
+}
 /* ==========================================================================
    Sidebar
    ========================================================================== */
+.advice-sidebar h4.beran-headline {
+  text-transform: uppercase;
+}
+.advice-sidebar .newsletter-form {
+  margin-bottom: 40px;
+}
+.advice-sidebar .newsletter-form h4 {
+  color: #a97357;
+  margin-bottom: 20px;
+}
+ul.advice-recentposts {
+  padding-left: 15px;
+  margin-bottom: 40px;
+}
+ul.advice-recentposts a {
+  color: #3c444c;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+ul.archives-list a {
+  color: #3c444c;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+.advice-social {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.advice-social a.social-icon {
+  font-size: .85em;
+  height: 25px;
+  width: 25px;
+  padding: 0;
+  text-align: center;
+  line-height: 1.9;
+  margin-right: 0;
+  margin-left: 5px;
+}
+.advice-social a.social-icon i {
+  color: white;
+}
 /* ==========================================================================
    Posts
    ========================================================================== */
+body.single .content {
+  font-size: 16px;
+  line-height: 1.65;
+}
+body.single .content .advice-img {
+  margin-bottom: 40px;
+}
+body.single .content .newsletter-form {
+  margin-top: 0;
+}
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -6903,10 +6967,10 @@ figure.alignnone {
     background: white;
     border-left: none;
     margin-left: -5px;
-    padding: 0 20px;
+    text-align: center;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    width: inherit;
+    width: 15%;
   }
   .btn-newsletter:hover {
     background: #eeeeee;
@@ -6917,9 +6981,13 @@ figure.alignnone {
   #mce-EMAIL {
     border-right: none;
     margin-right: 0;
+    width: 100%;
   }
   .footer-social {
     text-align: left;
+  }
+  .form-inline .form-group {
+    width: 85%;
   }
 }
 @media (min-width: 992px) {
