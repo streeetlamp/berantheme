@@ -6438,6 +6438,12 @@ body.single .advice-img {
 body.single .advice-post {
   margin-top: 20px;
 }
+body.contact {
+  background-image: -webkit-linear-gradient(left, color-stop(#ffffff 0%), color-stop(#d8efeb 100%));
+  background-image: linear-gradient(to right, #ffffff 0%, #d8efeb 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffd8efeb', GradientType=1);
+}
 body.awards-recognition .content ul {
   padding-left: 0;
 }
@@ -6565,6 +6571,32 @@ em.member-script {
 }
 span.member-phone {
   color: #599495;
+}
+body.contact .gform_wrapper .top_label .gfield_label {
+  font-family: "AvenirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #599495;
+  font-size: 14px;
+  margin: 15px 0 4px 0;
+}
+body.contact .ginput_complex label {
+  font-family: "AvenirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #599495;
+  text-transform: uppercase;
+}
+.gform_button {
+  background: #f16155;
+  border: none;
+  color: white;
+  font-family: "AvenirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 5px 40px;
 }
 /* ==========================================================================
    Primary Content
