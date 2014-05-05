@@ -41,8 +41,8 @@
   <?php if ( $post->post_parent == '457' ) : ?>
     <?php if( get_field('new_homes_img') ): ?>
     <div class="newhomes-wrap">
-      <a href="<?php siblings('before'); ?>" class="prev-builder builder-nav">prev</a>
-      <a href="<?php siblings('after'); ?>" class="next-builder builder-nav">next</a>
+      <a href="<?php siblings('before'); ?>" class="prev-builder builder-nav"></a>
+      <a href="<?php siblings('after'); ?>" class="next-builder builder-nav"></a>
       <div class="wrap container">
         <div class="content row">
           <div class="col-xs-12">
@@ -52,6 +52,17 @@
       </div>
     </div>
     <?php endif; ?>
+  <?php endif; ?>
+  <?php if ( is_page('building-advice') ) : ?>
+  <div class="buildingadvice-wrap">
+    <div class="wrap container">
+      <div class="content row">
+        <div class="col-xs-12 col-md-6 col-md-offset-6">
+          <a href="<?php the_field('building_advice_link'); ?>" class="advice-link">BUILDERS WE PROUDLY REPRESENT</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <?php endif; ?>
   <?php if ( is_page('contact') ) : ?>
   <div class="advice-footer">
