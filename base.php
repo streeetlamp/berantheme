@@ -17,8 +17,7 @@
     }
   ?>
 
-  <?php
-    if ( is_front_page() ) : ?>
+  <?php if ( is_front_page() ) : ?>
       <?php get_template_part('templates/slider'); ?>
       <?php get_template_part('templates/pathways'); ?>
       <?php get_template_part('templates/content-home'); ?>
@@ -39,9 +38,11 @@
 
   <?php endif; ?>
 
-  <?php if ( $post->post_parent == '14' ) : ?>
+  <?php if ( $post->post_parent == '457' ) : ?>
     <?php if( get_field('new_homes_img') ): ?>
     <div class="newhomes-wrap">
+      <a href="<?php siblings('before'); ?>" class="prev-builder builder-nav">prev</a>
+      <a href="<?php siblings('after'); ?>" class="next-builder builder-nav">next</a>
       <div class="wrap container">
         <div class="content row">
           <div class="col-xs-12">
@@ -51,6 +52,35 @@
       </div>
     </div>
     <?php endif; ?>
+  <?php endif; ?>
+  <?php if ( is_page('contact') ) : ?>
+  <div class="advice-footer">
+    <div class="container">
+      <div id="social-feed" class="row">
+        <div class="col-sm-12 col-md-8">
+          <?php get_template_part('templates/fb-feed'); ?>
+          <?php echo do_shortcode("[facebook-feed]"); ?>
+        </div>
+        <div class="col-md-4 col-sm-12 newsletter-form">
+          <h4>Sign up for up-to-the-minute listings, news and advice.</h4>
+            <div id="mc_embed_signup">
+              <form action="http://theberangroup.us8.list-manage.com/subscribe/post?u=cc81e067058b767efb1fb26be&amp;id=e39baaebbb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" role="form">
+                <div class="form-group">
+                  <input id="mce-EMAIL" type="email" class="form-control required email" name="EMAIL" placeholder="Enter Email Address">
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>
+                </div>
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-newsletter"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_cc81e067058b767efb1fb26be_e39baaebbb" value=""></div>
+              </form>
+            </div>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/birdnest.png" class="birdnest">
+        </div>
+      </div>
+    </div>
+  </div>
   <?php endif; ?>
 
   <?php get_template_part('templates/footer'); ?>

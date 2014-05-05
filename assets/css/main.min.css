@@ -6210,9 +6210,11 @@ a.red-button:hover {
 .navbar-default .navbar-nav > li > a em {
   font-family: 'AvenirBoldItalic';
 }
-.navbar-default .navbar-nav > li.active {
+.navbar-default .navbar-nav > li.open,
+.navbar-default .navbar-nav > li.active > a:after {
   z-index: 99;
 }
+.navbar-default .navbar-nav > li.open > a:after,
 .navbar-default .navbar-nav > li.active > a:after {
   background: transparent;
 }
@@ -6265,6 +6267,16 @@ body.home .navbar {
 .dropdown-menu > .active > a:focus {
   color: #f16155;
   background: transparent;
+}
+li.dropdown > ul.dropdown-menu > li.dropdown > ul.dropdown-menu {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
 }
 /* ==========================================================================
    Homepage Content
@@ -6588,6 +6600,10 @@ body.contact .ginput_complex label {
   color: #599495;
   text-transform: uppercase;
 }
+body.contact .contact-name {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
 .gform_button {
   background: #f16155;
   border: none;
@@ -6597,6 +6613,9 @@ body.contact .ginput_complex label {
   font-style: normal;
   text-transform: uppercase;
   padding: 5px 40px;
+}
+body.contact .office {
+  margin-bottom: -20px;
 }
 /* ==========================================================================
    Primary Content
@@ -6680,6 +6699,9 @@ body.single .content .newsletter-form {
 .content-info h5 {
   text-transform: uppercase;
 }
+body.contact .content-info {
+  margin-top: 0;
+}
 .social-icon {
   display: inline-block;
   background: #bbaba2;
@@ -6728,6 +6750,11 @@ body.single .content .newsletter-form {
 }
 .footer-social {
   text-align: center;
+}
+.advice-footer {
+  background: white;
+  padding: 4em 0;
+  box-shadow: inset 0 7px 7px -7px #666666;
 }
 /* ==========================================================================
    WordPress Generated Classes

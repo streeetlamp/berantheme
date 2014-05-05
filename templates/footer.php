@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-7 col-md-8 footer-blogdesc">
-        <h5><?php echo get_bloginfo ( 'description' );  ?></h5>
+        <h5><?php echo get_bloginfo('name'); ?>, <?php echo get_bloginfo ( 'description' );  ?></h5>
         <div class="contact-info">
           <section class="address">
             <?php if(get_field('location', 'option' ) != ""): ?><span><?php the_field('location', 'option'); ?></span><span class="contact-divider"></span><?php endif; ?>
