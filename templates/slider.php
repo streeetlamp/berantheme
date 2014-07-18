@@ -12,7 +12,9 @@
         $query->the_post(); ?>
         <div>
           <?php if( get_field('slide_link') ): ?><a href="<?php the_field('slide_link'); ?>"><?php endif; ?>
+          <?php if( get_field('outside_link') ): ?><a href="<?php the_field('outside_link'); ?>"><?php endif; ?>
             <?php the_post_thumbnail('full', array('class' => 'rsImg')); ?>
+          <?php if( get_field('outside_link') ): ?></a><?php endif; ?>
           <?php if( get_field('slide_link') ): ?></a><?php endif; ?>
         </div>
       <?php }

@@ -109,12 +109,18 @@ function display_cff($atts) {
 
 
     //Get the contents of the Facebook page
+    //https://graph.facebook.com/TheBeranGroup/posts?access_token=670325379698989|xTPh1Fb7erMIHSpZZkQLn8txckA
     $json_object = fetchUrl('https://graph.facebook.com/' . $page_id . '/posts?access_token=' . $access_token);
 
+
+    //Get the profile picture
+    //https://graph.facebook.com/TheBeranGroup/picture?redirect=0&height=200&type=normal&width=200
+    $json_pic = fetchUrl('https://graph.facebook.com/' . $page_id . '/picture?redirect=0&height=200&type=normal&width=200');
 
     //Interpret data with JSON
 
     $FBdata = json_decode($json_object);
+    $FBpic = json_decode($json_pic);
 
 
 
@@ -126,8 +132,7 @@ function display_cff($atts) {
     $content .= '<div class="cff-likebox"><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/' . $page_id . '" show_faces="false" stream="false" header="false" data-layout="button_count"></fb:like-box></div>';
 
     $content .='<h3>JOIN THE CONVERSATION</h3>';
-    $content .='<p class="visible-md visible-lg">Like us on Facebook, Follow us on Twitter and Pinterest or read our blog and hear about our latest listings, home decor, building tips and more.</p>';
-
+    $content .='<p class="visible-md visible-lg like-us"><small>Like us on Facebook, Follow us on Twitter and Pinterest or read our blog and hear about our latest listings, home decor, building tips and more.</small></p>';
 
     //Limit var
     $i = 0;
@@ -156,100 +161,21 @@ function display_cff($atts) {
 
             //If it isn't then create the post
 
-
-
-
-
             //Only create posts for the amount of posts specified
-
-
 
             if ( $i == $show_posts ) break;
 
-
-
             $i++;
 
-
-
-
-
             //Start the container
+            $content .= '<div class="cff-item row">';
 
-
-
-            $content .= '<div class="cff-item">';
-
-
-            //Text/title/description/date
-
-
-
-
-
-            //Text limits
-            $title_limit = $atts['titlelength'];
-            $body_limit = $atts['bodylength'];
-
-
-            if (!empty($news->story)) {
-
-                $story_text = $news->story;
-
-                if (isset($title_limit) && $title_limit !== '') {
-
-                    if (strlen($story_text) > $title_limit) $story_text = substr($story_text, 0, $title_limit) . '...';
-
-                }
-
-                $content .= '<h4>' . cff_make_clickable($story_text) . '</h4>';
-
-            }
-
-
-
-            if (!empty($news->message)) {
-
-                $message_text = $news->message;
-
-                if (isset($title_limit) && $title_limit !== '') {
-
-                    if (strlen($message_text) > $title_limit) $message_text = substr($message_text, 0, $title_limit) . '...';
-
-                }
-
-                $content .= '<h4>' . cff_make_clickable($message_text) . '</h4>';
-
-            }
-
-
-
-            if (!empty($news->description)) {
-
-                $description_text = $news->description;
-
-                if (isset($body_limit) && $body_limit !== '') {
-
-                    if (strlen($description_text) > $body_limit) $description_text = substr($description_text, 0, $body_limit) . '...';
-
-                }
-
-                $content .= '<p>' . cff_make_clickable($description_text) . '</p>';
-
-            }
-
-            $content .= '<p class="cff-date">Posted '. cff_timeSince(strtotime($news->created_time)) . ' ago</p>';
-
+            //Check for media
             //Make small images big
             if (!empty($news->picture)) {
                 $picture_b = $news->picture;
-                $picture_b = str_replace('_s','_b',$picture_b);
-                $picture_b = str_replace('_q','_b',$picture_b);
-                $picture_b = str_replace('_t','_b',$picture_b);
+                $picture_b = str_replace('_s','_n',$picture_b);
             }
-
-
-            //Check for media
 
             if ($news->type == 'link') {
 
@@ -323,14 +249,6 @@ function display_cff($atts) {
 
                 } else if (!empty($news->picture)) {
 
-                    //If there's a picture accompanying the link then display it
-
-                    $content .= '<a class="link" href="'.$news->link.'" target="_blank">';
-
-                    $content .= '<img src="'. $picture_b .'" border="0" style="padding-right:10px;" />';
-
-                    $content .= '</a>';
-
                 }
 
 
@@ -339,7 +257,7 @@ function display_cff($atts) {
 
                 if (!empty($news->description)) {
 
-                    $content .= '<a class="text-link" href="'.$news->link.'" target="_blank">'. '<b>' . $news->name . '</b></a>';
+                    $content .= '<div class="col-sm-12"><a class="text-link" href="'.$news->link.'" target="_blank">'. '<strong>' . $news->name . '</strong></a></div>';
 
                 }
 
@@ -347,13 +265,7 @@ function display_cff($atts) {
 
             else if ($news->type == 'photo') {
 
-                $content .= '<a title="View on Facebook" class="cff-photo" href="'.$news->link.'" target="_blank"><img src="'. $picture_b .'" border="0" /></a>';
-
-            }
-
-            else if ($news->type == 'swf') {
-
-                $content .= '<a href="http://www.facebook.com/permalink.php?story_fbid='.$PostID['1'].'&id='.$PostID['0'].'" target="_blank"><img src="'. $picture_b .'" border="0" /></a>';
+                $content .= '<div class="col-sm-12 col-md-4"><a title="View on Facebook" class="cff-photo" href="'.$news->link.'" target="_blank"><img src="'. $picture_b .'" border="0" /></a></div>';
 
             }
 
@@ -432,32 +344,98 @@ function display_cff($atts) {
 
                 }
 
-
-
+            } else {
+                $content .= '<div class="col-sm-12 col-md-4"><a title="View on Facebook" class="cff-photo" href="'.$news->link.'" target="_blank"><img src="'. $FBpic->data->url .'" border="0" /></a></div>';
             }
 
 
 
 
 
+
+            //Text limits
+
+
+            if (!empty($news->story)) {
+
+                $story_text = $news->story;
+
+                if (isset($title_limit) && $title_limit !== '') {
+
+                    if (strlen($story_text) > $title_limit) $story_text = substr($story_text, 0, $title_limit) . '...';
+
+                }
+
+                $content .= '<div class="col-sm-12 col-md-8"><h4>' . cff_make_clickable($story_text) . '</h4></div>';
+
+            }
+
+
+
+            if (!empty($news->message)) {
+
+                $message_text = $news->message;
+
+                if (isset($title_limit) && $title_limit !== '') {
+
+                    if (strlen($message_text) > $title_limit) $message_text = substr($message_text, 0, $title_limit) . '...';
+
+                }
+
+                $content .= '<div class="col-sm-12 col-md-8"><p><strong>' . cff_make_clickable($message_text) . '</strong></p></div>';
+
+            }
+
+
+
+            if (!empty($news->description)) {
+
+                $description_text = $news->description;
+
+                if (isset($body_limit) && $body_limit !== '') {
+
+                    if (strlen($description_text) > $body_limit) $description_text = substr($description_text, 0, $body_limit) . '...';
+
+                }
+
+                $content .= '<div class="col-sm-12"><p><strong>' . cff_make_clickable($description_text) . '</strong></p></div>';
+
+            }
+
+            //Display the link to the Facebook post or external link
+
+            if (!empty($news->link)) {
+
+                $link = $news->link;
+
+                //Check whether it links to facebook or somewhere else
+
+                $facebook_str = 'facebook.com';
+
+                if(stripos($link, $facebook_str) !== false) {
+
+                    $link_text = 'View on Facebook';
+
+                } else {
+
+                    $link_text = 'View Link';
+
+                }
+
+                $content .= '<div class="col-sm-4"><a class="cff-viewpost" href="' . $link . '" title="' . $link_text . '" target="_blank">' . $link_text . '</a></div>';
+
+            } else {
+                
+                $content .= '<div class="col-sm-4"><a class="cff-viewpost" href="' . $link . '" title="' . $link_text . '" target="_blank">' . $link_text . '</a></div>';
+            }
+
             //Check for likes
 
-            $content .= '<a href="javaScript:void(0);" class="view-comments"><ul class="cff-meta"><li class="likes"><span>Likes:</span> ';
+            $content .= '<div class="col-sm-4"><a href="javaScript:void(0);" class="view-comments"><ul class="cff-meta"><li class="likes"><span>Likes:</span> ';
 
-            if (empty($news->likes->count)) { $content .= '0'; }
+            if (empty($news->likes->data)) { $content .= '0'; }
 
-            else { $content .= $news->likes->count; }
-
-
-
-            //Check for shares
-
-            $content .= '</li><li class="shares"><span>Shares:</span> ';
-
-            if (empty($news->shares->count)) { $content .= '0'; }
-
-                else { $content .= $news->shares->count . '<br />'; }
-
+            else { $content .= count($news->likes->data); }
 
 
             //Check for comments
@@ -492,65 +470,9 @@ function display_cff($atts) {
 
             }
 
+            $content .= '</li></ul></a></div>';
 
-
-            $content .= '</li></ul></a>';
-
-
-
-            //Create the comments box
-
-            $content .= '<div class="comments-box">';
-
-            //Get the comments
-
-            if (!empty($news->comments->data)){
-
-                foreach ($news->comments->data as $comment_item ) {
-
-                    $comment = $comment_item->message;
-
-                    $content .= '<p><a href="http://facebook.com/'. $comment_item->from->id .'" class="name" target="_blank">' . $comment_item->from->name . '</a>' . cff_make_clickable($comment) . '<span class="time">'. cff_timeSince(strtotime($comment_item->created_time)) . ' ago</span></p>';
-
-                }
-
-            } else {
-
-                $content .= '<p>No comments yet</p>';
-
-            }
-
-            $content .= '</div> <!-- end .comments-box -->';
-
-
-
-
-
-            //Display the link to the Facebook post or external link
-
-            if (!empty($news->link)) {
-
-                $link = $news->link;
-
-                //Check whether it links to facebook or somewhere else
-
-                $facebook_str = 'facebook.com';
-
-                if(stripos($link, $facebook_str) !== false) {
-
-                    $link_text = 'View on Facebook';
-
-                } else {
-
-                    $link_text = 'View Link';
-
-                }
-
-                $content .= '<a class="cff-viewpost" href="' . $link . '" title="' . $link_text . '" target="_blank">' . $link_text . '</a>';
-
-            }
-
-
+            $content .= '<div class="col-sm-8"><p class="cff-date">Posted '. cff_timeSince(strtotime($news->created_time)) . ' ago</p></div>';
 
             //End the post item
 
@@ -824,6 +746,6 @@ add_filter('widget_text', 'do_shortcode');
 
 
 //Comment out the line below to view errors
-error_reporting(0);
+//error_reporting(0);
 
 ?>

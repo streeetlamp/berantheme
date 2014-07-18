@@ -64,6 +64,17 @@
     </div>
   </div>
   <?php endif; ?>
+  <?php if ( $post->post_parent == '34' ) : ?>
+  <div class="buildingadvice-wrap">
+    <div class="wrap container">
+      <div class="content row">
+        <div class="col-xs-12 col-md-6 col-md-offset-6">
+          <?php siblings_about('after'); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php endif; ?>
   <?php if ( is_page('contact') ) : ?>
   <div class="advice-footer">
     <div class="container">
@@ -88,6 +99,17 @@
               </form>
             </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/birdnest.png" class="birdnest">
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php endif; ?>
+  <?php if ( is_page('selling') ) : ?>
+  <div class="buildingadvice-wrap">
+    <div class="wrap container">
+      <div class="content row">
+        <div class="col-xs-12 col-md-6 col-md-offset-6">
+          <a href="<?php the_field('building_advice_link'); ?>" class="advice-link">GET TO KNOW OUR TEAM</a>
         </div>
       </div>
     </div>

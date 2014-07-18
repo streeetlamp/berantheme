@@ -1,3 +1,4 @@
+<?php if(get_field('page_header') != ""): ?>
 <div class="page-header col-sm-12">
   <h3>
     <?php if(get_field('page_header') != ""): ?>
@@ -10,3 +11,4 @@
     </h4>
   <?php endif; ?>
 </div>
+<?php endif; ?>

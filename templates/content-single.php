@@ -1,8 +1,8 @@
 <?php while (have_posts()) : the_post(); ?>
-<div id="content" role="main" class="col-md-7">
+<div id="content" role="main" class="col-md-8">
   <article <?php post_class(); ?>>
     <header>
-      <h2 class="beran-headline"><?php the_title(); ?></h2>
+      <h3 class="beran-headline"><?php the_title(); ?></h3>
       <?php get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-content advice-post">
@@ -19,13 +19,15 @@
         <a target="_blank" href="https://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&description=<?php the_title(); ?>&media=<?php echo get_theme_mod( 'beran_logo_upload' ); ?>" class="social-icon"><i class="fa fa-pinterest"></i></a>
         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" class="social-icon"><i class="fa fa-facebook"></i></a>
       </section>
+      <?php next_post('% ',
+      'Next Entry: ', 'yes'); ?>
     </div>
     <footer>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
     </footer>
   </article>
 </div>
-<div class="advice-sidebar col-md-5">
+<div class="advice-sidebar col-md-4">
   <section class="advice-social visible-lg visible-md">
     <span class="brown-pagetitle"><strong>Share:</strong></span>
     <a target="_blank" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" class="social-icon"><i class="fa fa-google-plus"></i></a>

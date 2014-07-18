@@ -5,9 +5,9 @@ Template Name: Advice
 ?>
 <div id="container">
   <div class="row">
-    <div id="content" role="main" class="col-md-7">
+    <div id="content" role="main" class="col-md-8">
       <?php the_post(); ?>
-      <h2 class="beran-headline"><?php the_title(); ?></h2>
+      <h3 class="beran-headline"><?php the_title(); ?></h3>
       <?php the_content(); ?>
       <?php
       $args = array (
@@ -29,13 +29,6 @@ Template Name: Advice
             <?php get_template_part('templates/entry-meta'); ?>
             <?php global $more; $more = 0; ?>
             <div class="advice-post-content"><?php the_content(''); ?></div>
-            <section class="advice-social">
-              <span class="brown-pagetitle"><strong>Share:</strong></span>
-              <a target="_blank" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" class="social-icon"><i class="fa fa-google-plus"></i></a>
-              <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_title(); ?> &url=<?php echo get_permalink(); ?>&via=TheBeranGroup" class="social-icon"><i class="fa fa-twitter"></i></a>
-              <a target="_blank" href="https://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&description=A blog dedicated to all things related to the nest&media=<?php echo get_theme_mod( 'beran_logo_upload' ); ?>" class="social-icon"><i class="fa fa-pinterest"></i></a>
-              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" class="social-icon"><i class="fa fa-facebook"></i></a>
-            </section>
           </div>
         <?php }
       } else { ?>
@@ -57,7 +50,7 @@ Template Name: Advice
         </nav>
       <?php endif; ?>
     </div><!-- #content -->
-    <div class="advice-sidebar col-md-5">
+    <div class="advice-sidebar col-md-4">
       <section class="advice-social">
         <span class="brown-pagetitle"><strong>Share:</strong></span>
         <a target="_blank" href="https://plus.google.com/share?url=<?php echo home_url('/advice') ?>" class="social-icon"><i class="fa fa-google-plus"></i></a>
@@ -90,6 +83,7 @@ Template Name: Advice
           foreach( $recent_posts as $recent ){
             echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
           }
+          wp_reset_postdata();
         ?>
       </ul>
       <h4 class="beran-headline">Archives</h4>
@@ -97,6 +91,26 @@ Template Name: Advice
         <?php wp_get_archives('type=monthly'); ?>
       </ul>
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/birdnest.png" class="birdnest advice-nest">
+      <?php
+        $args = array(
+          'posts_per_page' => 2,
+          'orderby' => 'rand'
+        );
+        $random_post = new WP_Query($args);
+        while ( $random_post->have_posts() ) {
+        $random_post->the_post(); ?>
+        <?php
+          if ( has_post_thumbnail() ) { ?>
+            <a href="<?php echo get_permalink(); ?>"> <?php the_post_thumbnail('medium', array( 'class'  => "img-responsive advice-img")); ?> </a>
+          <?php }
+        ?>
+        <h4 class="brown-pagetitle advice-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
+        <?php get_template_part('templates/entry-meta'); ?>
+        <?php global $more; $more = 0; ?>
+        <div class="advice-post-content"><?php the_content(''); ?></div>
+       <?php }
+       wp_reset_postdata();
+      ?>
     </div>
   </div>
 </div><!-- #container -->

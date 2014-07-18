@@ -66,6 +66,11 @@ function roots_setup() {
         'block' => 'h4',
       ),
       array(
+        'title' => 'Large Bold Gray Body Text',
+        'classes' => 'beran-largegray', // add this class to it
+        'inline' => 'span',
+      ),
+      array(
         'title' => 'Red Button',
         'selector' => 'a',
         'classes' => 'red-button',
